@@ -30,6 +30,7 @@ tooltip.show({
     margin: [0, 0, 0, 0],
     padding: [0, 0, 0, 0],
     color: "yellow",
+    textColor: "black",
   },
   android: {
     position: "bottom",
@@ -88,6 +89,7 @@ export interface Options {
     padding: Array<any>;
     margin: Array<any>;
     color: string;
+    textColor: string;
   };
   android?: {
     position?: ToolTipPosition;
