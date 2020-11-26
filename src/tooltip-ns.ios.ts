@@ -13,7 +13,7 @@ export class TooltipNs {
     var nsAttributed = NSAttributedString.alloc().initWithStringAttributes(
       options.message,
       new NSDictionary(
-        [new color_1.Color(options.ios.textColor).ios],
+        [new Color(options.ios.textColor).ios],
         [NSForegroundColorAttributeName]
       )
     );
