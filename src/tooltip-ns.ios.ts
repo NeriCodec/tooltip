@@ -10,17 +10,22 @@ export class TooltipNs {
 
   public show(options: Options) {
     let self = Frame.topmost().ios.controller;
-    var nsAttributed = NSAttributedString.alloc().initWithStringAttributes(
-      options.message,
-      new NSDictionary(
-        [new Color(options.ios.textColor).ios],
-        [NSForegroundColorAttributeName]
-      )
-    );
+    let nsAttributed;
 
-    let nsAttributed = NSAttributedString.alloc().initWithString(
-      options.message
-    );
+    if (
+      options.ios.textColor.length > 0 &&
+      typeof options.ios.textColor !== "undefined"
+    ) {
+      nsAttributed = NSAttributedString.alloc().initWithStringAttributes(
+        options.message,
+        new NSDictionary(
+          [new Color(options.ios.textColor).ios],
+          [NSForegroundColorAttributeName]
+        )
+      );
+    } else {
+      nsAttributed = NSAttributedString.alloc().initWithString(options.message);
+    }
 
     this.tooltip = SexyTooltip.alloc().initWithAttributedStringSizedToViewWithPaddingAndMargin(
       nsAttributed,

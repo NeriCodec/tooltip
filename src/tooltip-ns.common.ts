@@ -9,7 +9,7 @@ export interface Options {
     padding: Array<any>;
     margin: Array<any>;
     color: string;
-    textColor: string;
+    textColor?: string;
   };
   android?: {
     position?: ToolTipPosition;
