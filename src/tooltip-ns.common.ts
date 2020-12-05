@@ -20,6 +20,7 @@ export interface Options {
     delay?: number;
     hideArrow?: boolean;
     style?: string;
+    fitToScreen?: boolean;
   };
 }
 

@@ -56,7 +56,12 @@ export class TooltipNs {
     if (options.android.fadeDuration) {
       this.builder.fadeDuration(options.android.fadeDuration);
     }
-    this.builder.fitToScreen(false);
+
+    if (options.android.fitToScreen) {
+      this.builder.fitToScreen(true);
+    } else {
+      this.builder.fitToScreen(false);
+    }
 
     if (options.android.width) {
       this.builder.maxWidth(options.android.width);
