@@ -35,6 +35,7 @@ tooltip.show({
   android: {
     position: "bottom",
     style: "ToolTipLayoutCustomStyle",
+    fitToScreen: true,
   },
 });
 
